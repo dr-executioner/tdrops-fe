@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const twitchClientId = process.env.TWITCH_CLIENT_ID; 
-const accessToken = localStorage.getItem("access-token")
+const twitchClientId = process.env.NEXT_PUBLIC_TWITCH_CLIENT_ID;
+const accessToken = localStorage.getItem("access-token");
 
 const twitchAxios = axios.create({
   baseURL: "https://api.twitch.tv/helix",
