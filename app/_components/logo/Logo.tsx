@@ -1,4 +1,4 @@
-import { images } from '@/app/constants/constants'
+import { images } from '@/constants/constants'
 import Image from 'next/image'
 import React from 'react'
 

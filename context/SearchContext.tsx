@@ -3,15 +3,15 @@ import { createContext, Dispatch, ReactNode, useContext, useReducer } from "reac
 
 type SearchState = {
     query: string;
-    results: any[]; // Define Stream type based on Twitch API
+    results: any[];
     loading: boolean;
     error?: string;
 };
 
 type SearchAction =
     | { type: "SET_QUERY"; payload: string }
-    | { type: "START_SEARCH" }
-    | { type: "SEARCH_SUCCESS"; payload: any[] }
+    | { type: "START_SEARCH", payload: any }
+    | { type: "SEARCH_SUCCESS"; payload: any }
     | { type: "SEARCH_ERROR"; payload: string }
     | { type: "CLEAR_RESULTS" };
 

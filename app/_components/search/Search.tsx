@@ -6,15 +6,14 @@ import { useState, useMemo } from 'react'
 import { fetchTwitchStreamers } from '@/pages/api/twitch/twitch'
 import { debounce } from '@/lib/utils'
 
-type Props = {}
 
-const Search = (props: Props) => {
+const Search = () => {
     const { dispatch } = useSearch()
     const [query, setQuery] = useState("")
 
     const debouncedSearch = useMemo(() => debounce(async (value: string) => {
         if (!value) return
-        dispatch({ type: "SET_SEARCH", payload: value })
+        dispatch({ type: "START_SEARCH", payload: value })
         const results = await fetchTwitchStreamers(value)
         console.log(results)
     }, 350), [dispatch])

@@ -4,6 +4,16 @@ export interface Session {
  user : User
 }
 
+export interface Item {
+    id: number
+    label: string
+    path: string
+    action: any
+}
+export interface MenuItem {
+    authenticated : Item[]
+    notAuthenticated : Item[]
+}
 
 // {
 //     "user": {
