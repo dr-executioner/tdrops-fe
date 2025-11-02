@@ -12,9 +12,9 @@ export default function Home() {
   if (status === "loading") return <div>Loading...</div>
   return (
     <div className="">
-      <div className="px-6 min-w-full border-b-2">
-        <div className="flex justify-between items-center">
-          <Logo type="white" size={280} />
+      <div className="min-w-full border-b-2">
+        <div className="p-4 flex justify-between items-center">
+          <Logo type="purple" size={80} />
           <Search />
           <AvatarComponent image={data?.user?.image} />
         </div>

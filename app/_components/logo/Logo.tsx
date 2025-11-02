@@ -1,3 +1,4 @@
+import { images } from '@/app/constants/constants'
 import Image from 'next/image'
 import React from 'react'
 
@@ -10,9 +11,9 @@ const Logo = ({ type, size }: Props) => {
     return (
         <div>
             {type === "purple" ? (
-                <Image src="/Dropr_purple.png" height={size} width={size} alt="logo_purple" />
+                <Image src={images.logoPurple} height={size} width={size} alt="logo_purple" />
             ) : (
-                <Image src="/Dropr_white.png" height={size} width={size} alt="logo_white" />
+                <Image src={images.logoWhite} height={size} width={size} alt="logo_white" />
             )}
         </div>
     )
